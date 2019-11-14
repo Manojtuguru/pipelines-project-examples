@@ -4,7 +4,7 @@ resources:
     configuration:
       sourceArtifactory: art
       buildName: mvn_example_build
-      buildNumber: 2
+      buildNumber: abc
       
   - name: project_example
     type: GitRepo

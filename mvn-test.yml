@@ -34,7 +34,6 @@ pipelines:
             - name: art
         execution:
           onStart:
-            - _set_jdk openjdk8
             - javac -version
             - mvn --version
       - name: publishin

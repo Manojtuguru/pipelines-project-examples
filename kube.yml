@@ -1,10 +1,10 @@
 pipelines:
-  - name: kubetest
+  - name: "kubetest"
     steps:
       - name: getpods 
         type: bash
           integrations:
-            - name: kubeconfig
+            - name: "kubeconfig"
         execution:
           onStart:
             - echo "Preparing for work pods to be listed"

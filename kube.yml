@@ -1,0 +1,19 @@
+pipelines:
+  - name: kubetest
+    steps:
+      - name: getpods 
+        type: bash
+          integrations:
+            - name: kubeconfig
+        execution:
+          onStart:
+            - echo "Preparing for work pods to be listed"
+          onExecute:
+            - kubectl get pods -A
+            - echo "executing task command 2"
+          onSuccess:
+            - echo "Listed all the pods!"
+          onFailure:
+            - echo "uh oh, something went wrong not able to list the pods"
+          onComplete: #always
+            - echo "bye"
